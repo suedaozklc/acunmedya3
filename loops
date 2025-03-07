@@ -1,0 +1,42 @@
+using System;
+
+namespace LoopExamples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 1-) Döngüler Hakkında Açıklamalar
+            /*
+                For Döngüsü:
+                - Genellikle belirli bir aralıktaki işlemleri yapmak için kullanılır.
+                - Başlangıç, koşul ve artış/değişim bölümleri içerir.
+                - Örneğin: 1'den 10'a kadar sayıları yazdırmak için uygundur.
+
+                While Döngüsü:
+                - Koşul doğru olduğu sürece çalışır.
+                - Döngü sayısının önceden bilinmediği durumlarda tercih edilir.
+                - Kullanıcıdan giriş alınan veya belirsiz tekrar eden işlemler için uygundur.
+            */
+
+            // 2-) 1’den 10’a kadar olan sayıları ekrana yazdıran for döngüsü
+            Console.WriteLine("1'den 10'a kadar olan sayılar:");
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            // 3-) Kullanıcıdan alınan bir sayıya kadar olan sayıların toplamını hesaplayan program
+            Console.Write("Bir sayı girin: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int toplam = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                toplam += i;
+            }
+
+            Console.WriteLine($"1'den {n}'e kadar olan sayıların toplamı: {toplam}");
+        }
+    }
+}
